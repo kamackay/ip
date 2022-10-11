@@ -8,7 +8,7 @@ WORKDIR $GOPATH/src/gitlab.com/kamackay/ip-lookup
 RUN apt-get update && apt-get upgrade -y && \
     apt-get install -y git apt-utils golang-go
 
-ADD ./go.mod ./
+ADD ./go.mod ./go.sum ./
 
 RUN go mod download && \
     go mod verify
